@@ -7,3 +7,4 @@ A minimalistic React application for managing your to-do list.
 - Add new tasks to the to-do list.
 - Mark tasks as completed.
 - Remove tasks from the list.
+- Show total completion percentage.
