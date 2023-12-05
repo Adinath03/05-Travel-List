@@ -1,24 +1,26 @@
 import { useState } from "react";
 
-function Form() {
+function Form({ onAddItem }) {
   const [description, setDescription] = useState("");
   const [quantity, setQuantity] = useState(1);
 
-  function handleSubmt(e) {
+  function handleSubmit(e) {
     e.preventDefault();
 
     if (!description) {
       return;
     }
     const newItem = { description, quantity, packed: false, id: Date.now() };
-    console.log(newItem);
+    // console.log(newItem);
+
+    onAddItem(newItem);
 
     setDescription("");
     setQuantity(1);
   }
 
   return (
-    <form className="add-form" onSubmit={handleSubmt}>
+    <form className="add-form" onSubmit={handleSubmit}>
       <h3>What do you need for your trip?</h3>
       <select
         value={quantity}
