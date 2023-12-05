@@ -32,7 +32,7 @@ function App() {
         onDeleteItems={handleDeleteItems}
         onToggleItem={handleToggleItem}
       />
-      <Stats />
+      <Stats items={items} />
     </div>
   );
 }
